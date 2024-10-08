@@ -1,0 +1,12 @@
+services:
+  node-rest-shop:
+    container_name: node-rest-shop
+    environment:
+      JWT_KEY: "change_this_secret_key"
+    build: .
+    ports:
+      - 3000:3000
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
